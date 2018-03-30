@@ -1,0 +1,210 @@
+@import 'reset';
+
+$font-stack: 'Montserrat', sans-serif;
+$primary-color: #88C7D9;
+$head-text: #1F2527;
+
+body {
+  font: 100% $font-stack;
+}
+
+.landing {
+  width: 100%;
+  height: calc(100vh + 20px);
+  position: relative; 
+  background-image: url('../assets/blue-norfolk.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .landing-color {
+    width: 100%;
+    height: calc(100vh + 20px);
+    background-color: $primary-color;
+    opacity: 0.85;
+
+    div {
+      width: 100%;
+      height: calc(100vh + 20px);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }  
+
+    h1 {
+       display: inline;
+       font-size: 56px;
+       line-height: 0.9;
+       color: $head-text;
+       border: 4px solid $head-text;
+       padding: 2px;
+       transform: translateY(-20px);
+       opacity: 0;
+       animation: maddy 1000ms ease 200ms forwards;
+     } 
+  }
+
+  .down-arrow {
+    position: absolute;
+    width: 50px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.main {
+	position: relative;
+  display: flex;
+  // align-items: center;
+  padding-top: 50px;
+  padding-right: 20px;
+	
+	div {
+    flex-grow: 1;
+    text-align: right;
+
+    .main-info {
+      line-height: 2;
+    }
+
+		h2	{
+      color: $primary-color;
+      margin-top: 5vw;
+      
+		}
+
+		h3 {
+			color: grey;
+		}
+
+		li {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-color: grey;
+      border-radius: 50%;
+      margin: 0 4px;
+		}
+	}
+
+	.headshot {
+		max-width: 25%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	h1 {
+		position: absolute;
+    bottom: 0;
+    left: 10px;
+		color: darkgrey;
+		font-size: 9.4vw;
+    line-height: 8vw;
+    z-index: -1;
+	}
+}
+
+.instafeed-container {
+  background-color: $head-text;
+  padding: 30px 0;
+}
+
+#instafeed {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    position: relative;
+    width: 25%;
+    padding-top: 25%;
+    overflow: hidden;
+
+    &:hover img {
+      transform: scale3d(1.1,1.1,1);
+    }
+
+    &:hover .darken {
+      opacity: 0.8;
+    }
+
+    &:hover .details {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    transform: scale3d(1,1,1);
+    transition: 300ms ease-in-out;
+    }
+
+  .darken {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: #000;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+  }
+
+  .details {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 300ms ease-in-out;
+    
+    p {
+      text-align: center;
+      color: white;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+footer {
+  width: 90%;
+  max-width: 400px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 25px;
+  margin: 80px auto 15px auto;
+  border-top: 1px solid lightgrey;
+  color: lightgray;
+}
+
+@keyframes maddy {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}

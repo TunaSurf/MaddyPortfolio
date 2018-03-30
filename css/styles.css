@@ -1,0 +1,291 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  font: 100% "Montserrat", sans-serif;
+}
+
+.landing {
+  width: 100%;
+  height: calc(100vh + 20px);
+  position: relative;
+  background-image: url("../assets/blue-norfolk.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.landing .landing-color {
+  width: 100%;
+  height: calc(100vh + 20px);
+  background-color: #88C7D9;
+  opacity: 0.85;
+}
+
+.landing .landing-color div {
+  width: 100%;
+  height: calc(100vh + 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.landing .landing-color h1 {
+  display: inline;
+  font-size: 56px;
+  line-height: 0.9;
+  color: #1F2527;
+  border: 4px solid #1F2527;
+  padding: 2px;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  opacity: 0;
+  -webkit-animation: maddy 1000ms ease 200ms forwards;
+  animation: maddy 1000ms ease 200ms forwards;
+}
+
+.landing .down-arrow {
+  position: absolute;
+  width: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.landing .down-arrow p {
+  text-align: center;
+}
+
+.main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  padding-right: 20px;
+}
+
+.main div {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.main div .main-info {
+  line-height: 2;
+}
+
+.main div h2 {
+  color: #88C7D9;
+  margin-top: 5vw;
+}
+
+.main div h3 {
+  color: grey;
+}
+
+.main div li {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.main .headshot {
+  max-width: 25%;
+}
+
+.main .headshot img {
+  display: block;
+  width: 100%;
+}
+
+.main h1 {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: darkgrey;
+  font-size: 9.4vw;
+  line-height: 8vw;
+  z-index: -1;
+}
+
+.instafeed-container {
+  background-color: #1F2527;
+  padding: 30px 0;
+}
+
+#instafeed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#instafeed a {
+  position: relative;
+  width: 25%;
+  padding-top: 25%;
+  overflow: hidden;
+}
+
+#instafeed a:hover img {
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+#instafeed a:hover .darken {
+  opacity: 0.8;
+}
+
+#instafeed a:hover .details {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+#instafeed img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+#instafeed .darken {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+#instafeed .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 18px;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+#instafeed .details p {
+  text-align: center;
+  color: white;
+  padding-bottom: 10px;
+}
+
+footer {
+  width: 90%;
+  max-width: 400px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 25px;
+  margin: 80px auto 15px auto;
+  border-top: 1px solid lightgrey;
+  color: lightgray;
+}
+
+@-webkit-keyframes maddy {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+@keyframes maddy {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
